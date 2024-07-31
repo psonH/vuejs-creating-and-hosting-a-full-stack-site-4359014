@@ -1,22 +1,26 @@
 <template>
   <h1>Products</h1>
-  <div class="grid-wrap">
-    <div v-for="product in products" v-bind:key="product.id in products">
-      <img :src="product.imageName" />
-    </div>
-  </div>
-
+  <ProductsList :products="products" />
 </template>
 
 <script>
-import { products } from '../temp-data';
-  export default {
-    name: 'ProductsPage',
-    components: {},
-    data() {
-      return {
-        products,
-      }
-    }
-  }
+import ProductsList from "@/components/ProductsList.vue";
+import axios from "axios";
+
+export default {
+  name: "ProductsPage",
+  components: {
+    ProductsList,
+  },
+  data() {
+    return {
+      products: [],
+    };
+  },
+  async created() {
+    const response = await axios.get("/api/products");
+    const products = response.data;
+    this.products = products;
+  },
+};
 </script>

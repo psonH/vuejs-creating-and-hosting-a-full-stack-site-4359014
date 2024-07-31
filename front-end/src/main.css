@@ -38,7 +38,7 @@ h1 {
 }
 
 .product-container {
-  align-content: 'center';
+  align-content: "center";
   border-bottom: 1px solid #ddd;
   display: flex;
   padding: 16px;
@@ -64,10 +64,6 @@ h1 {
 .img-wrap {
   margin-top: 32px;
   text-align: center;
-}
-
-.img-wrap img {
-  width: 400px;
 }
 
 .product-details {
@@ -98,6 +94,7 @@ h1 {
 .grey-button {
   background-color: #888;
   width: 100%;
+  cursor: default;
 }
 
 .nav-bar {
@@ -136,6 +133,10 @@ h1 {
   position: absolute;
   right: 16px;
   top: 16px;
+}
+
+.nav-buttons-wrap > * {
+  margin: 5px;
 }
 
 .cart-link {
@@ -182,7 +183,7 @@ h1 {
 }
 
 .product-container {
-  align-content: 'center';
+  align-content: "center";
   border-bottom: 1px solid #ddd;
   display: flex;
   padding: 16px;
